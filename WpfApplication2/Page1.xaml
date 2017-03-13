@@ -1,0 +1,40 @@
+﻿<Page x:Class="WpfApplication2.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication2"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="Page1">
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical">
+            <Button Name="DrawDesk" Content="Draw Desktop" Click="DrawDesk_Click"/>
+
+            <Button Name="show_screenInfo" Click="show_screenInfo_Click">show the info!</Button>
+            <Button Name="getstatus" Click="getstatus_Click">get ststus</Button>
+            <Button Name="Getwindowslist" Click="Getwindowslist_Click">get windows list</Button>
+            <Button Name="GetWin32List" Click="GetWin32List_Click">List win32</Button>
+            <Button Name="Gettoplevel" Click="Gettoplevel_Click">Get top level</Button>
+            <Button Name="GetKuGou" Click="GetKuGou_Click" >Get KUGOU!</Button>
+            <Button Name="Notification" Click="Notification_Click">Get a notification!</Button>
+            <Button Name="setDesktop" Click="setDesktop_Click">set desktop!</Button>
+            <Button Name="showthewindow" Click="showthewindow_Click">show the window!</Button>
+        </StackPanel>
+        <ScrollViewer Grid.Column="1" CanContentScroll="True" VerticalScrollBarVisibility="Auto">
+            <TextBlock Name="ScreenInfo" Grid.Column="1" Background="Azure"/>
+        </ScrollViewer>
+        
+
+    </Grid>
+    
+</Page>

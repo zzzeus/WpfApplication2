@@ -1,0 +1,54 @@
+﻿<Page x:Class="WpfApplication2.animation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication2"
+      mc:Ignorable="d" 
+      
+      Title="animation">
+    <StackPanel Orientation="Vertical" >
+
+        <Button Name="goto" Click="goto_Click" IsTabStop="False" Focusable="False" IsHitTestVisible="False">
+            go to page1 
+        </Button>
+        <Button Name="gotowallpaper" Click="gotowallpaper_Click" Content="goto wallpaper" IsTabStop="False" Focusable="False" IsHitTestVisible="False"/>
+        <Button Name="gotovideo" Click="gotovideo_Click" IsTabStop="False" Focusable="False" IsHitTestVisible="False" >Go to video!</Button>
+        
+        <StackPanel  Orientation="Horizontal">
+            <TextBlock>鼠标位置：</TextBlock>
+            <TextBlock Name="point"></TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock>鼠标位置：</TextBlock>
+            <TextBlock Name="point2"></TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock>HWD：</TextBlock>
+            <TextBlock Name="hwd"></TextBlock>
+        </StackPanel>
+        <Button Name="show" Content="show" FontSize="30" Click="Button_Click"  />
+        <Button Name="openFile" Content="Click me!" Click="openFile_Click"/>
+        <Button Name="Speak" Content="Speak now!" Click="Speak_Click"/>
+        <Button Name="Stop" Content="Stop" Click="Stop_Click"/>
+        <Border Name="textborder" BorderBrush="Black" BorderThickness="2" CornerRadius="45" Padding="20">
+            <ScrollViewer CanContentScroll="True" VerticalScrollBarVisibility="Auto" 
+                          HorizontalScrollBarVisibility="Auto" 
+                          Height="200">
+                <TextBlock  TextWrapping="Wrap"
+                        Name="TextInFile"  />
+            </ScrollViewer>
+            
+            
+        </Border>
+        
+        <ScrollViewer CanContentScroll="True" VerticalScrollBarVisibility="Auto">
+            <TextBlock Name="Info"/>
+        </ScrollViewer>
+        
+
+
+
+    </StackPanel>
+    
+</Page>
